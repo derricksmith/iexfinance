@@ -56,6 +56,7 @@ class _IEXBase(object):
         self.output_format = kwargs.get("output_format",
                                         os.getenv("IEX_OUTPUT_FORMAT", 'json'))
         if self.output_format not in self._VALID_FORMATS:
+            print(self.output_format)
             raise ValueError("Please enter a valid output format ('json' "
                              "or 'pandas').")
         self.token = kwargs.get("token")
